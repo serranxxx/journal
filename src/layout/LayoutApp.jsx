@@ -11,7 +11,7 @@ import { Showtext } from './Showtext';
 
 export const LayoutApp = () => {
 
-  
+
   const [header, setHeader] = useState(Math.floor(Math.random() * 13) + 1)
   const [writing, setWriting] = useState(false)
   const [prompt, setPrompt] = useState(false)
@@ -121,27 +121,28 @@ export const LayoutApp = () => {
   }
 
   const handleData = (newData) => {
-    const Item = data.find(item => item.simpleDate === newData.simpleDate)
-    if (Item) {
-      Item.emotion = newData.emotion
-      Item.font = newData.font
-      Item.bold = newData.bold
-      Item.italic = newData.italic
-      Item.justify = newData.justify
-      Item.color = newData.color
-      Item.title = newData.title
-      Item.text = newData.text
-      Item.date = newData.date
-      Item.simpleDate = newData.simpleDate
-      Item.prompt = newData.prompt
-      Item.prompstate = newData.prompstate
-      Item.id = newData.id
-      setData([...data])
-    } else {
-      setData([...data, newData])
+    if (data) {
+      const Item = data.find(item => item.simpleDate === newData.simpleDate)
+      if (Item) {
+        Item.emotion = newData.emotion
+        Item.font = newData.font
+        Item.bold = newData.bold
+        Item.italic = newData.italic
+        Item.justify = newData.justify
+        Item.color = newData.color
+        Item.title = newData.title
+        Item.text = newData.text
+        Item.date = newData.date
+        Item.simpleDate = newData.simpleDate
+        Item.prompt = newData.prompt
+        Item.prompstate = newData.prompstate
+        Item.id = newData.id
+        setData([...data])
+      } else {
+        setData([...data, newData])
+      }
     }
 
-    console.log(data)
 
   }
 
@@ -159,9 +160,9 @@ export const LayoutApp = () => {
     const thoughts = JSON.parse(localStorage.getItem('thoughts'))
     if (thoughts) setData(thoughts)
     else setData([])
-    
+
   }, [])
-  
+
 
 
 
