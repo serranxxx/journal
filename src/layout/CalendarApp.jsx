@@ -73,15 +73,17 @@ export const CalendarApp = (props) => {
                     onClick={() => props.handleShowText(date.format('YYYY-MM-DD'))}
                     style={{
 
-                        width: '100%', height: '100%',
+                        width: '100%', height: '100%', marginTop:'-25px',
                         alignItems: 'center', justifyContent: 'center',
-                        backgroundColor: `${props.color.color_1}20`,
+                        backgroundColor: `${props.color.color_1}20`,position: 'absolute',
 
                     }}>
-                    <img src={data} style={{
-                        width: '80%',
+                    <img 
+                    onClick={() => props.handleShowText(date.format('YYYY-MM-DD'))}
+                    src={data} style={{
+                        width: '120%',
                         position: 'absolute',
-                        marginTop: '-3vh', 
+                         
                     }} />
                 </div>
             </>
@@ -180,11 +182,11 @@ export const CalendarApp = (props) => {
                 className='small'
                 cellRender={dateCellRender}
                 headerRender={customHeaderRender}
-                // fullscreen={false}
+                fullscreen={false}
                 style={{
                     marginTop: '0vh', backgroundColor: `#fff`,
                     borderRadius: '2vh', padding: '1%',
-                    color: `${props.color.color_2}`
+                    color: `${props.color.color_2}`,
                 }} />
         </>
 
