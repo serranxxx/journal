@@ -79,7 +79,7 @@ export const CalendarApp = (props) => {
 
                     }}>
                     <img src={data} style={{
-                        width: '150%',
+                        width: '80%',
                         position: 'absolute',
                         marginTop: '-3vh', 
                     }} />
@@ -180,7 +180,7 @@ export const CalendarApp = (props) => {
                 className='small'
                 cellRender={dateCellRender}
                 headerRender={customHeaderRender}
-                fullscreen={false}
+                // fullscreen={false}
                 style={{
                     marginTop: '0vh', backgroundColor: `#fff`,
                     borderRadius: '2vh', padding: '1%',
