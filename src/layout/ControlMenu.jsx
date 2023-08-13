@@ -242,7 +242,7 @@ export const ControlMenu = (props) => {
                 </div>
 
 
-                <Select
+                {/* <Select
                     dropdownStyle={{ backgroundColor: '#f2f2f2' }}
                     className='select'
                     placeholder={`Default`}
@@ -292,17 +292,17 @@ export const ControlMenu = (props) => {
                             margin: 0, fontFamily: 'Palatino', color: props.color2
                         }}>Palatino</p>
                     </Option>
-                </Select>
+                </Select> */}
 
                 <Button
                     onClick={handleBold}
-                    icon={<AiOutlineBold size={20} style={{ color: props.color2, }} />} style={{
+                    icon={<AiOutlineBold size={17} style={{ color: props.color2, }} />} style={{
                         borderRadius: '1vh 0 0 1vh', backgroundColor: `#ffffff${bold ? '' : '90'}`,
-                        border: `1px solid${props.color}20`
+                        border: `1px solid${props.color}20`,
                     }} />
                 <Button
                     onClick={handleItalic}
-                    icon={<AiOutlineItalic size={20} style={{ color: props.color2, }} />} style={{
+                    icon={<AiOutlineItalic size={17} style={{ color: props.color2, }} />} style={{
                         borderRadius: '0', backgroundColor: `#ffffff${italic ? '' : '90'}`,
                         border: `1px solid${props.color}20`
                     }} />
