@@ -13,7 +13,7 @@ export const ControlMenu = (props) => {
     const [italic, setItalic] = useState(false)
     const [justify, setJusitfy] = useState('left')
     const [justIcon, setJustIcon] = useState(<BsJustifyLeft size={20} style={{ color: props.color2 }} />)
-    const [color, setColor] = useState(props.color)
+    const [color, setColor] = useState(props.color3)
     const [font, setFont] = useState('')
 
     const handleBold = () => {
@@ -97,7 +97,7 @@ export const ControlMenu = (props) => {
         setItalic(false)
         setJusitfy('left')
         setJustIcon(<BsJustifyLeft size={20} style={{ color: props.color2 }} />)
-        setColor('#222')
+        setColor(props.color2)
         setFont('')
     }, [props.writing])
 
@@ -105,13 +105,13 @@ export const ControlMenu = (props) => {
     return (
 
         <>
-            <Row 
-            className='layout-large'
-            style={{
-                // display: `${!props.state ? 'none' : 'flex'}`,
-                marginLeft: '1vh', transition: 'all 0.45s ease-in-out',
-                alignItems: 'center', flexDirection: 'row',
-            }}>
+            <Row
+                className='layout-large'
+                style={{
+                    // display: `${!props.state ? 'none' : 'flex'}`,
+                    marginLeft: '1vh', transition: 'all 0.45s ease-in-out',
+                    alignItems: 'center', flexDirection: 'row',
+                }}>
 
                 <div
                     className='emotion'
@@ -196,13 +196,31 @@ export const ControlMenu = (props) => {
                         borderRadius: '0', backgroundColor: `#ffffff90`,
                         border: `1px solid${props.color}20`
                     }} />
-                <ColorPicker value={props.color2}
+                <ColorPicker value={color}
                     onChange={changeColor}
                     style={{
                         borderRadius: '0 1vh 1vh 0', backgroundColor: `#ffffff90`,
                         border: `1px solid${props.color}20`
 
                     }}
+                    presets={[
+                        {
+                            label: 'Recommended',
+                            colors: [
+                                '#000000',
+                                props.color,
+                                props.color2,
+                                '#F5222D',
+                                '#FA8C16',
+                                '#FADB14',
+                                '#8BBB11',
+                                '#52C41A',
+                                '#13A8A8',
+                                '#FFF'
+
+                            ],
+                        }
+                    ]}
                 />
                 <Button
                     onClick={saveNote}
@@ -220,14 +238,14 @@ export const ControlMenu = (props) => {
                     }}>{`${!props.prompt ? 'Add prompt' : 'Delete prompt'}`}</Button>
             </Row>
 
-            <Row 
-            className='layout-small'
-            style={{
-                
-                marginLeft: '1vh', transition: 'all 0.45s ease-in-out',
-                alignItems: 'center', flexDirection: 'row', 
-                // border:'1px solid red'
-            }}>
+            <Row
+                className='layout-small'
+                style={{
+
+                    marginLeft: '1vh', transition: 'all 0.45s ease-in-out',
+                    alignItems: 'center', flexDirection: 'row',
+                    // border:'1px solid red'
+                }}>
 
                 <div
                     className='emotion'
@@ -312,13 +330,32 @@ export const ControlMenu = (props) => {
                         borderRadius: '0', backgroundColor: `#ffffff90`,
                         border: `1px solid${props.color}20`
                     }} />
-                <ColorPicker value={props.color2}
+                <ColorPicker value={color}
                     onChange={changeColor}
                     style={{
                         borderRadius: '0 1vh 1vh 0', backgroundColor: `#ffffff90`,
                         border: `1px solid${props.color}20`
 
                     }}
+                    presets={[
+                        {
+                            label: 'Recommended',
+                            colors: [
+                                '#000000',
+                                props.color,
+                                props.color2,
+                                '#F5222D',
+                                '#FA8C16',
+                                '#FADB14',
+                                '#8BBB11',
+                                '#52C41A',
+                                '#13A8A8',
+                                '#FFF'
+
+                            ],
+                        }
+                    ]}
+
                 />
                 <Button
                     onClick={saveNote}

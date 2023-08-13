@@ -11,27 +11,6 @@ import { Showtext } from './Showtext';
 
 export const LayoutApp = () => {
 
-
-  const [header, setHeader] = useState(Math.floor(Math.random() * 13) + 1)
-  const [writing, setWriting] = useState(false)
-  const [prompt, setPrompt] = useState(false)
-  const [bold, setBold] = useState(false)
-  const [italic, setItalic] = useState(true)
-  const [font, setFont] = useState('')
-  const [justify, setJustify] = useState('left')
-  const [color, setColor] = useState('#222')
-  const [modal, setModal] = useState(false)
-  const [emotion, setEmotion] = useState(emotions.e1)
-  const [values, setValues] = useState({
-    title: '',
-    date: '',
-    prompt: '',
-    text: '',
-    propmtState: false
-  })
-  const [data, setData] = useState(JSON.parse(localStorage.getItem('thoughts')))
-  const [showText, setShowText] = useState(false)
-  const [pickedDate, setPickedDate] = useState('')
   const getHeader = (index) => {
     switch (index) {
       case 1:
@@ -64,6 +43,28 @@ export const LayoutApp = () => {
         break;
     }
   }
+
+  const [header, setHeader] = useState(Math.floor(Math.random() * 13) + 1)
+  const [writing, setWriting] = useState(false)
+  const [prompt, setPrompt] = useState(false)
+  const [bold, setBold] = useState(false)
+  const [italic, setItalic] = useState(true)
+  const [font, setFont] = useState('')
+  const [justify, setJustify] = useState('left')
+  const [color, setColor] = useState(getHeader(header).color_2)
+  const [modal, setModal] = useState(false)
+  const [emotion, setEmotion] = useState(emotions.e1)
+  const [values, setValues] = useState({
+    title: '',
+    date: '',
+    prompt: '',
+    text: '',
+    propmtState: false
+  })
+  const [data, setData] = useState(JSON.parse(localStorage.getItem('thoughts')))
+  const [showText, setShowText] = useState(false)
+  const [pickedDate, setPickedDate] = useState('')
+
 
   useEffect(() => {
     const changeBody = () => {
@@ -222,7 +223,7 @@ export const LayoutApp = () => {
             display: `${!writing ? 'none' : 'flex'}`, alignItems: 'center', justifyContent: 'space-between',
             flexDirection: 'row', width: '95%'
           }}>
-            <ControlMenu writing={writing} handleData={handleData} values={values} emotion={emotion} state={writing} color={getHeader(header).color_1} color2={getHeader(header).color_2} action={prompstate} prompt={prompt} bold={boldState} italic={italicState} fonts={handleFonts} justify={handleJusitfy} ActionColor={handleColor} modal={handleModal} />
+            <ControlMenu writing={writing} handleData={handleData} values={values} emotion={emotion} state={writing} color={getHeader(header).color_1} color2={getHeader(header).color_2} color3={color} action={prompstate} prompt={prompt} bold={boldState} italic={italicState} fonts={handleFonts} justify={handleJusitfy} ActionColor={handleColor} modal={handleModal} />
 
             <Row>
               <Button
@@ -260,7 +261,7 @@ export const LayoutApp = () => {
           padding: '2% 5% 5% 5%', display: `${!writing ? 'none' : ''}`,
           transition: 'all 0.45s ease-in-out'
         }}>
-          <InputText writing={writing} handleValues={handleValues} emotion={handleEmotion} color={getHeader(header).color_1} color2={getHeader(header).color_2} prompt={prompt} bold={bold} italic={italic} font={font} justify={justify} modal={modal} handleModal={handleModal} />
+          <InputText writing={writing} handleValues={handleValues} emotion={handleEmotion} color={getHeader(header).color_1} color2={color} prompt={prompt} bold={bold} italic={italic} font={font} justify={justify} modal={modal} handleModal={handleModal} />
         </div>
 
         <div style={{
@@ -307,7 +308,7 @@ export const LayoutApp = () => {
             display: `${!writing ? 'none' : 'flex'}`, alignItems: 'center', justifyContent: 'center',
             flexDirection: 'row', width: '95%', flexWrap: 'wrap'
           }}>
-            <ControlMenu writing={writing} handleData={handleData} values={values} emotion={emotion} state={writing} color={getHeader(header).color_1} color2={getHeader(header).color_2} action={prompstate} prompt={prompt} bold={boldState} italic={italicState} fonts={handleFonts} justify={handleJusitfy} ActionColor={handleColor} modal={handleModal} />
+            <ControlMenu writing={writing} handleData={handleData} values={values} emotion={emotion} state={writing} color={getHeader(header).color_1} color2={getHeader(header).color_2} color3={color} action={prompstate} prompt={prompt} bold={boldState} italic={italicState} fonts={handleFonts} justify={handleJusitfy} ActionColor={handleColor} modal={handleModal} />
 
 
           </Row>
@@ -359,7 +360,7 @@ export const LayoutApp = () => {
           alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
         }}>
 
-          <InputText writing={writing} handleValues={handleValues} emotion={handleEmotion} color={getHeader(header).color_1} color2={getHeader(header).color_2} prompt={prompt} bold={bold} italic={italic} font={font} justify={justify} modal={modal} handleModal={handleModal} />
+          <InputText writing={writing} handleValues={handleValues} emotion={handleEmotion} color={getHeader(header).color_1} color2={color} prompt={prompt} bold={bold} italic={italic} font={font} justify={justify} modal={modal} handleModal={handleModal} />
           <Row style={{
             marginTop: '1vh',
             width: '100%'

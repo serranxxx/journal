@@ -139,7 +139,7 @@ export const InputText = (props) => {
                     padding: '2% 0 2% 0', flexDirection: 'column'
                 }}>
                 <Row style={{
-                    width: '80%'
+                    width: '90%'
                 }}>
                     <Input
                         placeholder={'Jot down your thoughts here...'}
@@ -151,10 +151,10 @@ export const InputText = (props) => {
                             fontWeight: 600, backgroundColor: 'transparent', border: `1px solid ${props.color}20`,
                             fontStyle: 'italic', fontFamily: props.font, color: props.color2
                         }} />
-                    <p style={{
+                    {/* <p style={{
                         marginLeft: '2vh', width: '35%', fontWeight: 650, color: props.color2,
                         fontSize: '1em', fontStyle: 'italic', fontFamily: props.font
-                    }}>{`/ ${date}`}</p>
+                    }}>{`/ ${date}`}</p> */}
                 </Row>
                 <hr style={{
                     width: '90%',

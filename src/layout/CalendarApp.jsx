@@ -79,9 +79,9 @@ export const CalendarApp = (props) => {
 
                     }}>
                     <img src={data} style={{
-                        width: '100%',
+                        width: '150%',
                         position: 'absolute',
-                        marginTop: '-3vh', opacity: '90%'
+                        marginTop: '-3vh', 
                     }} />
                 </div>
             </>
