@@ -7,6 +7,10 @@ import head_6 from '../assets/headers/SVG/head_6.svg'
 import head_7 from '../assets/headers/SVG/head_7.svg'
 import head_8 from '../assets/headers/SVG/head_8.svg'
 import head_9 from '../assets/headers/SVG/head_9.svg'
+import head_10 from '../assets/headers/SVG/head_10.svg'
+import head_11 from '../assets/headers/SVG/head_11.svg'
+import head_12 from '../assets/headers/SVG/head_12.svg'
+import head_13 from '../assets/headers/SVG/head_13.svg'
 
 export const heads = {
     head_1: {
@@ -53,5 +57,26 @@ export const heads = {
         img: head_9,
         color_1: '#f4f3f1',
         color_2: '#141d4b'
-    }
+    },
+    head_10: {
+        img: head_10,
+        color_1: '#1956a7',
+        color_2: '#f7fafb'
+    },
+    head_11: {
+        img: head_11,
+        color_1: '#d9e8b1',
+        color_2: '#366ed1'
+    },
+    head_12: {
+        img: head_12,
+        color_1: '#e2ceb3',
+        color_2: '#bc9457'
+    },
+    head_13: {
+        img: head_13,
+        color_1: '#1d1a21',
+        color_2: '#e9e9e9'
+    },
+    
 }

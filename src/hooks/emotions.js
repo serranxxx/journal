@@ -72,4 +72,5 @@ export const emotions = {
     e34: emotion_34,
     e35: emotion_35,
     e36: emotion_36,
+    eArray: [emotion_1, emotion_2, emotion_3, emotion_4, emotion_5, emotion_6, emotion_7, emotion_8, emotion_9, emotion_10, emotion_11, emotion_12, emotion_13, emotion_14, emotion_15, emotion_16, emotion_17, emotion_18, emotion_19, emotion_20, emotion_21, emotion_22, emotion_23, emotion_24, emotion_26, emotion_27, emotion_28, emotion_29, emotion_30, emotion_31, emotion_32, emotion_33, emotion_34, emotion_35, emotion_36]
 }

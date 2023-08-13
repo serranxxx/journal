@@ -13,6 +13,11 @@ code {
 }
 
 .select .ant-select-selector {
-  background-color: #ffffff60 !important;
+  background-color: #ffffff90 !important;
+  border: 0px solid #fff !important
 
+}
+
+.emotion:hover {
+  transform: scale(1.2) !important;
 }
