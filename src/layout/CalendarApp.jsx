@@ -151,22 +151,16 @@ export const CalendarApp = (props) => {
 
     useEffect(() => {
 
-        props.data.map((item) => (
-            setEmotion(prevObjeto => ({
-                ...prevObjeto,
-                [item.simpleDate]: item.emotion
-            }))
-        ))
+        if (props.data) {
+            props.data.map((item) => (
+                setEmotion(prevObjeto => ({
+                    ...prevObjeto,
+                    [item.simpleDate]: item.emotion
+                }))
+            ))
+        }
 
     }, [props.data])
-
-    const handleDateClick = (e) => {
-        console.log(e)
-        // console.log('Fecha seleccionada:', date.format('YYYY-MM-DD'));
-        // props.handleShowText(date.format('YYYY-MM-DD'))
-    };
-
-
 
 
     return (
@@ -178,7 +172,7 @@ export const CalendarApp = (props) => {
                 headerRender={customHeaderRender}
                 style={{
                     marginTop: '0vh', backgroundColor: `#fff`,
-                    borderRadius: '2vh', padding: '1%', 
+                    borderRadius: '2vh', padding: '1%',
                     color: `${props.color.color_2}`
                 }} />
 
@@ -189,7 +183,7 @@ export const CalendarApp = (props) => {
                 fullscreen={false}
                 style={{
                     marginTop: '0vh', backgroundColor: `#fff`,
-                    borderRadius: '2vh', padding: '1%', 
+                    borderRadius: '2vh', padding: '1%',
                     color: `${props.color.color_2}`
                 }} />
         </>

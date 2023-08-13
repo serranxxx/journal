@@ -333,7 +333,7 @@ export const ControlMenu = (props) => {
                         fontWeight: 500, borderRadius: '0 1vh 1vh 0',
                         backgroundColor: `#ffffff90`, color: props.color2,
                         border: `1px solid${props.color}20`
-                    }}>{`${!props.prompt ? 'prompt' : 'undo'}`}</Button>
+                    }}>{`${!props.prompt ? 'Prompt' : 'Undo'}`}</Button>
             </Row>
         </>
 
