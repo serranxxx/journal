@@ -15,32 +15,35 @@ export const Showtext = (props) => {
     const [font, setFont] = useState('')
 
     useEffect(() => {
-        const Item = props.data.find(item => item.simpleDate === props.pickedDate)
-        if (Item) {
+        if (props.data) {
+            const Item = props.data.find(item => item.simpleDate === props.pickedDate)
+            if (Item) {
 
-            setTitle(Item.title)
-            setText(Item.text)
-            setPrompt(Item.prompt)
-            setPromptState(Item.promptState)
-            setDate(Item.date)
-            setColor(Item.color)
-            setJustify(Item.justify)
-            setItalic(Item.italic)
-            setBold(Item.bold)
-            setFont(Item.font)
-            console.log('item: ', Item)
-        } else {
-            setTitle('')
-            setText('')
-            setPrompt('')
-            setPromptState('')
-            setDate(props.pickedDate)
-            setColor('')
-            setJustify('left')
-            setItalic(false)
-            setBold(false)
-            setFont('')
-            console.log('No hay item ')
+                setTitle(Item.title)
+                setText(Item.text)
+                setPrompt(Item.prompt)
+                setPromptState(Item.promptState)
+                setDate(Item.date)
+                setColor(Item.color)
+                setJustify(Item.justify)
+                setItalic(Item.italic)
+                setBold(Item.bold)
+                setFont(Item.font)
+                console.log('item: ', Item)
+            } else {
+                setTitle('')
+                setText('')
+                setPrompt('')
+                setPromptState('')
+                setDate(props.pickedDate)
+                setColor('')
+                setJustify('left')
+                setItalic(false)
+                setBold(false)
+                setFont('')
+                console.log('No hay item ')
+            }
+
         }
 
 
