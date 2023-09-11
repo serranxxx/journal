@@ -35,7 +35,56 @@ import emotion_34 from '../assets/emotions/SVG/emotion_34.svg'
 import emotion_35 from '../assets/emotions/SVG/emotion_35.svg'
 import emotion_36 from '../assets/emotions/SVG/emotion_36.svg'
 
+
+import e1 from '../assets/newers/SVG/e1.svg'
+import e2 from '../assets/newers/SVG/e2.svg'
+import e3 from '../assets/newers/SVG/e3.svg'
+import e4 from '../assets/newers/SVG/e4.svg'
+import e5 from '../assets/newers/SVG/e5.svg'
+import e6 from '../assets/newers/SVG/e6.svg'
+import e7 from '../assets/newers/SVG/e7.svg'
+import e8 from '../assets/newers/SVG/e8.svg'
+import e9 from '../assets/newers/SVG/e9.svg'
+import e10 from '../assets/newers/SVG/e10.svg'
+import e11 from '../assets/newers/SVG/e11.svg'
+import e12 from '../assets/newers/SVG/e12.svg'
+import e13 from '../assets/newers/SVG/e13.svg'
+import e14 from '../assets/newers/SVG/e14.svg'
+import e15 from '../assets/newers/SVG/e15.svg'
+import e16 from '../assets/newers/SVG/e16.svg'
+import e17 from '../assets/newers/SVG/e17.svg'
+import e18 from '../assets/newers/SVG/e18.svg'
+import e19 from '../assets/newers/SVG/e19.svg'
+import e20 from '../assets/newers/SVG/e20.svg'
+
+
+
+
 export const emotions = {
+    e1,
+    e2,
+    e3,
+    e4,
+    e5,
+    e6,
+    e7,
+    e8,
+    e9,
+    e10,
+    e11,
+    e12,
+    e13,
+    e14,
+    e15,
+    e16,
+    e17,
+    e18,
+    e19,
+    e20,
+    eArray: [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18, e19, e20]
+}
+
+export const emotions2 = {
     e1: emotion_1,
     e2: emotion_2,
     e3: emotion_3,

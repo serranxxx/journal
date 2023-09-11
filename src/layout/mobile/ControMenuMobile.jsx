@@ -7,7 +7,7 @@ import { BiFontFamily } from "react-icons/bi";
 
 const { Option } = Select
 
-export const ControlMenu = (props) => {
+export const ControlMenuMobile = (props) => {
 
     const { setBold, setItalic, setJusitfy, setFont, bold, italic, justify, emotion, setModal } = props
     const [justIcon, setJustIcon] = useState(<BsJustifyLeft size={25} style={{ color: '#463f3a' }} />)
@@ -45,9 +45,10 @@ export const ControlMenu = (props) => {
 
         <>
             <div style={{
-                marginLeft: -100, marginBottom: '4vh',
+
+                marginBottom: '15vh',
                 width: 'auto', height: 'auto', padding: '1%',
-                borderRadius: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                borderRadius: '2.5vh', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexDirection: 'row', backgroundColor: '#f4f3ee',
                 boxShadow: '0px 0px 10px #00000020'
             }}>
@@ -107,7 +108,7 @@ export const ControlMenu = (props) => {
                 </Select>
 
                 <Button
-                    className='button'
+                    // className='button'
                     type='ghost'
                     onClick={() => setBold(!bold)}
                     icon={<AiOutlineBold size={25} style={{ color: '#463f3a' }} />} style={{
@@ -119,7 +120,7 @@ export const ControlMenu = (props) => {
                         // border: `1px solid${props.color}20`
                     }} />
                 <Button
-                    className='button'
+                    // className='button'
                     type='ghost'
                     onClick={() => setItalic(!italic)}
                     icon={<AiOutlineItalic size={25} style={{ color: '#463f3a' }} />} style={{
@@ -129,7 +130,7 @@ export const ControlMenu = (props) => {
                         transition: 'all 0.15s ease-in-out'
                     }} />
                 <Button
-                    className='button'
+                    // className='button'
                     type='ghost'
                     onClick={handleJusitfy}
                     icon={justIcon} style={{
@@ -145,7 +146,8 @@ export const ControlMenu = (props) => {
                     height: '40px', width: "1px"
                 }} />
 
-                <img src={emotion} className='button' 
+                <img src={emotion} 
+                // className='button' 
                 onClick={() => setModal(true)}
                 style={{
                     height: '50px', marginRight: '0vh', transition: 'all 0.35s ease-in-out',

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -13,11 +14,40 @@ code {
 }
 
 .select .ant-select-selector {
-  background-color: #ffffff90 !important;
-  border: 0px solid #fff !important
+  background-color: #e0afa070 !important;
+  border-radius: 2vh;
+  border:0px solid transparent;
+  /* width:50px !important; */
+  height: 50px !important;
+  /* border: 0px solid #fff !important */
 
 }
 
 .emotion:hover {
   transform: scale(1.2) !important;
+}
+
+
+.scrollable-div::-webkit-scrollbar {
+  width: 0px;
+  /* Ancho del scroll */
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Color del track */
+}
+
+
+.draggable {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  cursor: grab;
+  user-select: none;
+}
+
+.button:hover {
+  transform: translateY(-5px);
 }

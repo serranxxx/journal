@@ -1,5 +1,5 @@
 import React from 'react'
-import { emotions } from '../hooks/emotions'
+import { emotions } from '../helpers/emotions'
 
 export const EmotionCard = (props) => {
 

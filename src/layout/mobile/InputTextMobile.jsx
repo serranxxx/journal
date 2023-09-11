@@ -1,9 +1,9 @@
 import { Button, Input, Row } from 'antd'
 import React, { useEffect, useState } from 'react'
-import { RandomQuestion } from '../helpers/RandomQuestion'
+import { RandomQuestion } from '../../helpers/RandomQuestion'
 import { TbSwitch2 } from 'react-icons/tb'
 
-export const InputText = (props) => {
+export const InputTextMobile = (props) => {
 
 
     const { handleValues, prompt } = props
@@ -73,24 +73,24 @@ export const InputText = (props) => {
                         value={title}
                         maxLength={35}
                         style={{
-                            width: '60%', marginBottom: '1vh', fontSize: '1.6em', textAlign: 'left',
+                            width: '80%', marginBottom: '1vh', fontSize: '1.6em', textAlign: 'left',
                             fontWeight: 600, backgroundColor: 'transparent',
                             border: `1px solid transparent`,
                             fontStyle: 'italic', fontFamily: props.font,
                             color: '#463f3a',
                         }} />
-                    <p style={{
+                    {/* <p style={{
                         marginLeft: '2vh', width: '35%', fontWeight: 650,
                         color: '#463f3a',
                         fontSize: '1.5em', fontStyle: 'italic', fontFamily: props.font
-                    }}>{`/ ${date}`}</p>
+                    }}>{`/ ${date}`}</p> */}
                 </Row>
                 <hr style={{
-                    width: '90%',
-                    border: `2px solid #463f3a80`
+                    width: '70%', borderRadius:'2vh',
+                    border: `2px solid #E0AFA080`
                 }} />
                 <Row style={{
-                    width: '88%', alignItems: 'center',
+                    width: '90%', alignItems: 'center',
                     justifyContent: 'flex-start', flexDirection: 'row',
                     display: `${prompt ? 'flex' : 'none'}`
                 }}>
