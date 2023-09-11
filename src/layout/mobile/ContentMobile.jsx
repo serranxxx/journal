@@ -62,7 +62,7 @@ export const ContentMobile = (props) => {
                     borderRadius: '2vh', backgroundColor: '#BCB8B150',
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                 }}>
-                    <img src={handleBanners(banner)} style={{ height: '100%', transition: 'all 0.45s ease-in-out' }} />
+                    <img src={handleBanners(banner)} style={{ width: '90%', transition: 'all 0.45s ease-in-out' }} />
                 </div>
                 <div style={{
                     width: '80%', height: '40vh', backgroundColor: '#BCB8B150',
@@ -72,7 +72,7 @@ export const ContentMobile = (props) => {
                     <div style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         flexDirection: 'column', height: '80%', padding:'4%'
-                    }}><img src={handleImages(image)} style={{ height: '100%', transition: 'all 0.45s ease-in-out' }} />
+                    }}><img src={handleImages(image)} style={{ width: '70%', transition: 'all 0.45s ease-in-out' }} />
 
                     </div>
 
@@ -83,7 +83,7 @@ export const ContentMobile = (props) => {
                     borderRadius: '2vh', backgroundColor: '#BCB8B150',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom:'5%'
                 }}>
-                    <img src={handleBanners(banner_2)} style={{ height: '100%', transition: 'all 0.45s ease-in-out' }} />
+                    <img src={handleBanners(banner_2)} style={{ width: '90%', transition: 'all 0.45s ease-in-out' }} />
                 </div>
 
                 <div

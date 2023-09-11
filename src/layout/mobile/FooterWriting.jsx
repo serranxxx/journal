@@ -58,7 +58,7 @@ export const FooterWriting = (props) => {
             }}>
 
                 <Col style={{
-                    height: '100%', width: '40%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    height: '100%', width: '50%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     flexDirection: 'row'
                 }}>
 

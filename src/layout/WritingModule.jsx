@@ -72,6 +72,12 @@ export const WritingModule = () => {
 
     }, [])
 
+    const handleEmotions = (emotion) => {
+        setEmotion(emotion)
+        setModal(false)
+
+    }
+
 
 
     return (
@@ -137,7 +143,7 @@ export const WritingModule = () => {
                     display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
                     flexDirection: 'row', flexWrap: 'wrap',
                 }}>
-                    <EmotionCard data={emotions.eArray} action={setEmotion}
+                    <EmotionCard data={emotions.eArray} action={handleEmotions}
                     />
                 </div>
 

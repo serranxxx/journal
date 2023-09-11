@@ -12,13 +12,13 @@ export const HeaderMobile = (props) => {
             backgroundColor: `#E0AFA0`,
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             // boxShadow: '10px 0px 10px #00000040',
-            height: '12vh',
+            height: '10vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
 
 
            
-        <img src={titles.title_white}  style={{height:'30%', }}/>
+        <img src={titles.title_white}  style={{height:'35%', }}/>
 
         </Header>
     )
