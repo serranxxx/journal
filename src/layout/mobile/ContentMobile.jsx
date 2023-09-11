@@ -65,7 +65,7 @@ export const ContentMobile = (props) => {
                     <img src={handleBanners(banner)} style={{ width: '90%', transition: 'all 0.45s ease-in-out' }} />
                 </div>
                 <div style={{
-                    width: '80%', height: '40vh', backgroundColor: '#BCB8B150',
+                    width: '80%', aspectRatio:'2/1', backgroundColor: '#BCB8B150',
                     borderRadius: '2vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
                     padding: '5%', margin:'5% 0 5% 0'
                 }}>
