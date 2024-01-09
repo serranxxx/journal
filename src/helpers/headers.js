@@ -80,3 +80,43 @@ export const heads = {
     },
     
 }
+
+export const fonts = [
+    {
+        name:'Default',
+        family:'',
+        value:''
+    },
+    {
+        name:'Arial',
+        family:'Arial',
+        value:'Arial'
+    },
+    {
+        name:'Berlin Sans FB',
+        family:'Berlin Sans FB',
+        value:'Berlin Sans FB'
+    },
+    {
+        name:'Helvetica',
+        family:'Helvetica',
+        value:'Helvetica'
+    },
+    {
+        name:'Times New Roman',
+        family:'Times New Roman',
+        value:'Times New Roman'
+    },
+    {
+        name:'Georgia',
+        family:'Georgia',
+        value:'Georgia'
+    },
+    {
+        name:'Palatino',
+        family:'Palatino',
+        value:'Palatino'
+    },
+    
+
+]

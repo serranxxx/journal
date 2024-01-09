@@ -11,6 +11,7 @@ import { EmotionCard } from './EmotionCard'
 import { FooterWriting } from './mobile/FooterWriting'
 import { FooterMobile2 } from './mobile/FooterMobile2'
 import { HeaderMobile } from './mobile/HeaderMobile'
+import { FooterMobile_ } from './mobile/FooterMobile_'
 
 export const WritingModule = () => {
 
@@ -87,13 +88,13 @@ export const WritingModule = () => {
                 className='layout-large'
                 style={{ minHeight: '100vh', backgroundColor: '#F4F3EE' }}>
 
-                <SiderWeb
+                {/* <SiderWeb
                     bold={bold} italic={italic} justify={justify} font={font} emotion={emotion}
                     values={values} handleData={handleData}
-                    prompt={prompt} setPrompt={setPrompt} />
+                    prompt={prompt} setPrompt={setPrompt} /> */}
                 <Layout>
 
-                    <HeaderWeb />
+                    <HeaderWeb location={false} />
                     <ContenWriting
                         bold={bold} italic={italic} justify={justify} font={font}
                         prompt={prompt} values={values}
@@ -102,7 +103,7 @@ export const WritingModule = () => {
                     <FooterWeb bold={bold} italic={italic} justify={justify} font={font}
                         setBold={setBold} setItalic={setItalic} setJustify={setJustify}
                         setFont={setFont} emotion={emotion} setModal={setModal}
-                        prompt={prompt} values={values}
+                        prompt={prompt} values={values} handleData={handleData} setPrompt={setPrompt}
                     />
 
                 </Layout>
@@ -114,18 +115,24 @@ export const WritingModule = () => {
                 style={{ minHeight: '100vh', backgroundColor: '#F4F3EE' }}>
 
 
-                <HeaderMobile />
+                <HeaderMobile location={false}/>
                 <ContenWriting
                     bold={bold} italic={italic} justify={justify} font={font}
                     prompt={prompt} values={values}
                     setValues={setValues} />
 
-                <FooterMobile2 bold={bold} italic={italic} justify={justify} font={font}
+                <FooterMobile_ bold={bold} italic={italic} justify={justify} font={font}
+                    setBold={setBold} setItalic={setItalic} setJustify={setJustify}
+                    setFont={setFont} emotion={emotion} setModal={setModal}
+                    prompt={prompt} values={values} handleData={handleData} setPrompt={setPrompt}
+                />
+
+                {/* <FooterMobile2 bold={bold} italic={italic} justify={justify} font={font}
                     setBold={setBold} setItalic={setItalic} setJustify={setJustify}
                     setFont={setFont} emotion={emotion} setModal={setModal}
                     prompt={prompt} values={values} handleData={handleData}
                     setPrompt={setPrompt}
-                />
+                /> */}
 
                 {/* <FooterWriting /> */}
 

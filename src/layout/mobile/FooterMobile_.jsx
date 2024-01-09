@@ -4,7 +4,7 @@ import { TbTextPlus } from 'react-icons/tb';
 import { ControlMenu } from '../ControlMenu';
 
 const { Footer } = Layout;
-export const FooterWeb = (props) => {
+export const FooterMobile_ = (props) => {
 
     const { prompt, values, setBold, setItalic, setJustify, setFont, bold, italic, justify, font, emotion , setModal,
         setPrompt, handleData } = props

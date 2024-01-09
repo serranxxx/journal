@@ -25,9 +25,9 @@ export const ContenWriting = (props) => {
         <Content
             className='scrollable-div'
             style={{
-                marginTop: '12vh', marginBottom: '14vh', overflowY: 'scroll', height: 'auto',
+                marginTop: '0vh', marginBottom: '14vh', overflowY: 'scroll', height: 'auto',
                 display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
-                flexDirection: 'column', padding: '1%', backgroundColor: '#f4f3ee'
+                flexDirection: 'column', padding: '0%', backgroundColor: '#f4f3ee'
             }}
         >
             <InputTextMobile handleValues={handleValues} prompt={prompt}

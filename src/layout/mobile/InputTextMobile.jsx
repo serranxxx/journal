@@ -63,7 +63,7 @@ export const InputTextMobile = (props) => {
                     padding: '2% 0 2% 0', flexDirection: 'column'
                 }}>
                 <Row style={{
-                    width: '90%',
+                    width: '95%',
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     flexDirection: 'row',
                 }}>
@@ -73,7 +73,7 @@ export const InputTextMobile = (props) => {
                         value={title}
                         maxLength={35}
                         style={{
-                            width: '80%', marginBottom: '1vh', fontSize: '1.6em', textAlign: 'left',
+                            width: '80%', marginBottom: '1vh', fontSize: '1.4em', textAlign: 'left',
                             fontWeight: 600, backgroundColor: 'transparent',
                             border: `1px solid transparent`,
                             fontStyle: 'italic', fontFamily: props.font,
@@ -86,23 +86,24 @@ export const InputTextMobile = (props) => {
                     }}>{`/ ${date}`}</p> */}
                 </Row>
                 <hr style={{
-                    width: '70%', borderRadius:'2vh',
-                    border: `2px solid #E0AFA080`
+                    width: '90%', borderRadius:'2vh',
+                    border: `1px solid #E0AFA060`
                 }} />
                 <Row style={{
-                    width: '90%', alignItems: 'center',
+                    width: '95%', alignItems: 'center',
                     justifyContent: 'flex-start', flexDirection: 'row',
                     display: `${prompt ? 'flex' : 'none'}`
                 }}>
                     <p style={{
                         marginRight: '2vh', width: 'auto', fontWeight: 600, textAlign: props.justify,
-                        fontSize: '1.3em', fontStyle: `${props.italic ? '' : 'italic'}`, fontFamily: props.font, width: '93%',
+                        fontSize: '1.1em', fontStyle: `${props.italic ? '' : 'italic'}`, fontFamily: props.font,
+                         width: '93%',
                         color: '#463f3a',
                     }}>{`${RandomQuestion(randomNum)}`}</p>
                     <Button
                         type='ghost'
                         onClick={() => setRandomNum(Math.floor(Math.random() * 100) + 1)}
-                        icon={<TbSwitch2 size={20} style={{}} />}
+                        icon={<TbSwitch2 size={18} style={{}} />}
                         style={{
                             backgroundColor: `transparent`,
                             border: `0px solid #463f3a`, marginTop: '1vh'
@@ -118,7 +119,7 @@ export const InputTextMobile = (props) => {
                     wrap="soft"  
                     style={{
                         color: '#463f3a', fontFamily: props.font, textAlign: props.justify,
-                        width: '90%', height: 'auto', fontSize: '1.1em', marginTop: '1vh', fontStyle: `${!props.italic ? '' : 'italic'}`,
+                        width: '95%', height: 'auto', fontSize: '1em', marginTop: '1vh', fontStyle: `${!props.italic ? '' : 'italic'}`,
                         fontWeight: `${props.bold ? 600 : 400}`, backgroundColor: 'transparent', border: `1px solid transparent`,
                     }} />
             </div>

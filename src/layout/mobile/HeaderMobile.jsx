@@ -1,10 +1,12 @@
 import React from 'react'
 import { Button, Col, Layout, Row, Select } from 'antd';
 import { titles } from '../../helpers/title';
+import { Link } from 'react-router-dom';
+import { TiArrowBack } from 'react-icons/ti';
 
 const { Header } = Layout;
 const { Option } = Select
-export const HeaderMobile = (props) => {
+export const HeaderMobile = ({location}) => {
     
     return (
         <Header style={{
@@ -19,6 +21,23 @@ export const HeaderMobile = (props) => {
 
            
         <img src={titles.title_white}  style={{height:'35%', }}/>
+        {
+                !location ?
+                <Link to={"/journal/"}>
+                    <Button 
+                    type='ghost'
+                    icon={<TiArrowBack 
+                        size={35}
+                        style={{
+                        color:'#f4f3ed'
+                    }}/>}
+                    style={{
+                        position:'absolute', right:'25px', top:'15px'
+                    }}
+                    />
+                </Link>
+                : <></>
+            }
 
         </Header>
     )

@@ -176,6 +176,7 @@ export const CalendarApp = (props) => {
                 className='large'
                 cellRender={dateCellRender}
                 headerRender={customHeaderRender}
+                fullscreen={true}
                 style={{
                     marginTop: '0vh', backgroundColor: `#FFFFFC`,
                     borderRadius: '2vh', padding: '2%',

@@ -12,6 +12,7 @@ export const ContentWeb = (props) => {
 
     const [data, setData] = useState(JSON.parse(localStorage.getItem('thoughts')))
     const [banner, setBanner] = useState(Math.floor(Math.random() * 11) + 1)
+    const [banner_, setBanner_] = useState(Math.floor(Math.random() * 11) + 1)
     const [image, setImage] = useState(Math.floor(Math.random() * 9) + 1)
     const [pickedDate, setPickedDate] = useState('date')
     const [currentDate, setCurrentDate] = useState('')
@@ -19,6 +20,7 @@ export const ContentWeb = (props) => {
 
     const RandomColor = () => {
         setBanner(Math.floor(Math.random() * 11) + 1)
+        setBanner_(Math.floor(Math.random() * 11) + 1)
         setImage(Math.floor(Math.random() * 9) + 1)
     }
 
@@ -41,11 +43,12 @@ export const ContentWeb = (props) => {
 
     return (
         <>
-            <Content className='scrollable-div'
+            <Content 
+            className='scroll'
                 style={{
-                    marginTop: '12vh', marginBottom: '14vh', overflowY: 'scroll',
+                    marginTop: '0vh', marginBottom: '3vh', overflowY: 'scroll',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    flexDirection: 'row', padding: '5% 0 0 0'
+                    flexDirection: 'row', padding: '0% 0 0 0'
                 }}
             >
 
@@ -54,9 +57,9 @@ export const ContentWeb = (props) => {
                     flexDirection: 'row', height: '70vh',
                 }}>
                     <div
-                        className='scrollable-div'
+                        className='scroll'
                         style={{
-                            width: '65%', height: '100%',
+                            width: '65%', height: '137%', zIndex:0,
                             borderRadius: '2vh', overflow: 'auto', backgroundColor: '#FFFFFC'
                         }}>
                         <CalendarApp data={data} action={handleSelect}  />
@@ -75,7 +78,7 @@ export const ContentWeb = (props) => {
                         <div style={{
                             width: '100%', height: '60%', backgroundColor: '#BCB8B150',
                             borderRadius: '2vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            marginTop: '5%',
+                            marginTop: '5%', marginBottom:'5%'
                         }}>
                             <div style={{
                                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -85,12 +88,20 @@ export const ContentWeb = (props) => {
                                     <Button style={{
                                         backgroundColor: '#463f3a',
                                         width: '15vw', color: '#f4f3ee',
-                                        fontWeight: '600'
+                                        fontWeight: '600',
+                                        borderRadius:'3vh', border:'1px solid #463f3a'
                                     }}>Start writing</Button>
                                 </Link>
 
                             </div>
 
+                        </div>
+                        <div style={{
+                            width: '100%', height: '35%',
+                            borderRadius: '2vh', backgroundColor: '#BCB8B150',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center'
+                        }}>
+                            <img src={handleBanners(banner_)} style={{ height: '100%', transition: 'all 0.45s ease-in-out' }} />
                         </div>
                     </Col>
                 </Row>

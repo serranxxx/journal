@@ -13,14 +13,14 @@ export const LayoutApp = () => {
       <Layout
         className='layout-large'
         style={{ minHeight: '100vh', backgroundColor: '#F4F3EE' }}>
-        <HeaderWeb />
+        <HeaderWeb location={true}/>
         <ContentWeb />
       </Layout>
 
       <Layout
         className='layout-small'
         style={{ minHeight: '100vh', backgroundColor: '#F4F3EE' }}>
-        <HeaderMobile/>
+        <HeaderMobile location={true}/>
         <ContentMobile />
         <FooterMobile />
       </Layout>
