@@ -129,7 +129,7 @@ export const ControlMenu = (props) => {
                 borderRadius: '3.5vh', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 flexDirection: 'row', backgroundColor: '#f4f3ee',
                 width:'100%',
-                boxShadow: '0px 0px 10px #00000020'
+                // boxShadow: '0px 0px 10px #00000020'
             }}>
                 <Button
                     onClick={() => saveNote()}

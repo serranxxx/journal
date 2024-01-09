@@ -22,19 +22,38 @@ export const ContenWriting = (props) => {
 
 
     return (
-        <Content
-            className='scrollable-div'
-            style={{
-                marginTop: '0vh', marginBottom: '14vh', overflowY: 'scroll', height: 'auto',
-                display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
-                flexDirection: 'column', padding: '0%', backgroundColor: '#f4f3ee'
-            }}
-        >
-            <InputTextMobile handleValues={handleValues} prompt={prompt}
-                bold={bold} italic={italic} font={font} justify={justify}
-            />
+        <>
+            <Content
+                className='scrollable-div layout-large'
+                style={{
+                    marginTop: '0vh', marginBottom: '14vh', overflowY: 'scroll', height: 'auto',
+                    alignItems: 'flex-start', justifyContent: 'flex-start',
+                    flexDirection: 'column', padding: '0%', backgroundColor: '#f4f3ee'
+                }}
+            >
+                <InputTextMobile handleValues={handleValues} prompt={prompt}
+                    bold={bold} italic={italic} font={font} justify={justify}
+                />
 
 
-        </Content>
+            </Content>
+
+            <Content
+                className='scrollable-div layout-small'
+                style={{
+                    marginTop: '8vh', marginBottom: '14vh', overflowY: 'scroll', height: 'auto',
+                    alignItems: 'flex-start', justifyContent: 'flex-start',
+                    flexDirection: 'column', padding: '0%', backgroundColor: '#f4f3ee'
+                }}
+            >
+                <InputTextMobile handleValues={handleValues} prompt={prompt}
+                    bold={bold} italic={italic} font={font} justify={justify}
+                />
+
+
+            </Content>
+        </>
+
+
     )
 }
