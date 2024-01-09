@@ -127,14 +127,6 @@ export const WritingModule = () => {
                     prompt={prompt} values={values} handleData={handleData} setPrompt={setPrompt}
                 />
 
-                {/* <FooterMobile2 bold={bold} italic={italic} justify={justify} font={font}
-                    setBold={setBold} setItalic={setItalic} setJustify={setJustify}
-                    setFont={setFont} emotion={emotion} setModal={setModal}
-                    prompt={prompt} values={values} handleData={handleData}
-                    setPrompt={setPrompt}
-                /> */}
-
-                {/* <FooterWriting /> */}
 
             </Layout>
 

@@ -125,11 +125,11 @@ export const ControlMenu = (props) => {
             <div style={{
                 marginBottom: '0vh',
 
-                padding: '2%',
-                borderRadius: '3.5vh', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                padding: '0.5% 1% 0.5% 1%',
+                borderRadius: '3.5vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
                 flexDirection: 'row', backgroundColor: '#f4f3ee',
-                width:'100%',
-                // boxShadow: '0px 0px 10px #00000020'
+                // width:'100%',
+                boxShadow: '0px 0px 10px #00000020'
             }}>
                 <Button
                     onClick={() => saveNote()}

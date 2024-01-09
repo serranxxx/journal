@@ -1,6 +1,6 @@
-import { Button, Layout, Select } from 'antd';
+import { Button, Layout, Row, Select } from 'antd';
 import { TbTextPlus } from 'react-icons/tb';
-import { ControlMenu } from '../ControlMenu'; 
+import { ControlMenu } from '../ControlMenu';
 import React, { useEffect, useState } from 'react'
 import { AiFillSave, AiOutlineBold, AiOutlineItalic, AiOutlineSave } from 'react-icons/ai'
 import { BsJustifyLeft, BsJustifyRight, BsJustify } from 'react-icons/bs'
@@ -122,125 +122,145 @@ export const FooterMobile_ = (props) => {
     return (
         <Footer style={{
             position: 'fixed', zIndex: 1, width: '100%', bottom: 0,
-            display: 'flex', alignItems: 'center', justifyContent: 'space-around',
-            height: '10vh',
-            borderTop:'1px solid #463f3a20',
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            flexDirection: 'row',
+            height: '10vh', padding: '0 5% 0 5%',
+            borderTop: '1px solid #463f3a20',
             // boxShadow: '-10px 0px 10px #00000030',
             backgroundColor: '#f4f3ee'
         }}>
 
-            <Button
-                onClick={() => saveNote()}
-                className='button'
-                onMouseEnter={() => setSaveButton(true)} onMouseLeave={() => setSaveButton(false)}
-                style={{
-                    borderRadius: '50%',
-                    backgroundColor: `#e0afa0${saveButton ? '' : '70'}`,
-                    // height: '50px', width: '50px',
-                    border: '0px solid transparent',
-                    transition: 'all 0.45s ease-in-out',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}
-                icon={!saveButton
-                    ? <AiOutlineSave size={18} style={{ color: '#463f3a' }} />
-                    : <AiFillSave size={18} style={{ color: '#463f3a' }} />} type='ghost' />
+            <Row style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                flexDirection: 'row'
+            }}>
+                <Button
+                    onClick={() => saveNote()}
+                    className='button'
+                    onMouseEnter={() => setSaveButton(true)} onMouseLeave={() => setSaveButton(false)}
+                    style={{
+                        borderRadius: '3vh 0 0 3vh',
+                        backgroundColor: `#e0afa0${saveButton ? '' : '70'}`,
+                        // height: '35px', width: '35px',
+                        border: '0px solid transparent',
+                        transition: 'all 0.45s ease-in-out', marginRight: '2px',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }}
+                    icon={!saveButton
+                        ? <AiOutlineSave size={18} style={{ color: '#463f3a' }} />
+                        : <AiFillSave size={18} style={{ color: '#463f3a' }} />} type='ghost' />
 
-            <Button
-                className='button'
-                onClick={() => setPrompt(!prompt)}
-                onMouseEnter={() => setPromptButton(true)} onMouseLeave={() => setPromptButton(false)}
-                style={{
-                    borderRadius: '50%',
-                    backgroundColor: `#e0afa0${prompt ? '' : '70'}`,
-                    // height: '50px', width: '50px',
-                    border: '0px solid transparent',
-                    transition: 'all 0.45s ease-in-out',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}
-                icon={!prompt
-                    ? <PiFeather size={18} style={{ color: '#463f3a' }} />
-                    : <PiFeatherFill size={18} style={{ color: '#463f3a' }} />} type='ghost' />
+                <Button
+                    className='button'
+                    onClick={() => setPrompt(!prompt)}
+                    onMouseEnter={() => setPromptButton(true)} onMouseLeave={() => setPromptButton(false)}
+                    style={{
+                        borderRadius: '0 3vh 3vh 0',
+                        backgroundColor: `#e0afa0${prompt ? '' : '70'}`,
+                        // height: '35px', width: '35px',
+                        border: '0px solid transparent',
+                        transition: 'all 0.45s ease-in-out',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }}
+                    icon={!prompt
+                        ? <PiFeather size={18} style={{ color: '#463f3a' }} />
+                        : <PiFeatherFill size={18} style={{ color: '#463f3a' }} />} type='ghost' />
 
+
+
+            </Row>
 
 
 
             <div style={{
-                backgroundColor: '#463f3a80', 
+                backgroundColor: '#463f3a80',
                 height: '20px', width: "1px",
+                margin: '0 0.5vh 0 0.5vh'
             }} />
 
-            <Select
-                dropdownStyle={{ backgroundColor: '#f4f3ed' }}
-                className='select'
-                value={font}
-                placeholder={font}
-                // value={<BiFontFamily size={25} style={{ marginTop: '1.3vh', color: '#463f3a' }} />}
-                // placeholder={<BiFontFamily size={25} style={{ marginTop: '1.3vh', color: '#463f3a' }} />}
-                onChange={(value) => setFont(value)}
-                style={{
-                    width: '25vw',
-                    transition: 'all 0.45s ease-in-out',
+            <Row style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                flexDirection: 'row'
+            }}>
+                <Select
+                    dropdownStyle={{ backgroundColor: '#f4f3ed' }}
+                    className='select'
+                    value={font}
+                    placeholder={font}
+                    // value={<BiFontFamily size={25} style={{ marginTop: '1.3vh', color: '#463f3a' }} />}
+                    // placeholder={<BiFontFamily size={25} style={{ marginTop: '1.3vh', color: '#463f3a' }} />}
+                    onChange={(value) => setFont(value)}
+                    style={{
+                        width: '25vw',
+                        transition: 'all 0.45s ease-in-out',
 
 
-                }}>
+                    }}>
 
-                {
-                    fonts.map((item) => (
-                        <Option key={item.name} value={item.value}>
-                            <p style={{
-                                margin: 0, fontFamily: item.family,
-                            }}>{item.name}</p>
-                        </Option>
-                    ))
-                }
+                    {
+                        fonts.map((item) => (
+                            <Option key={item.name} value={item.value}>
+                                <p style={{
+                                    margin: 0, fontFamily: item.family,
+                                }}>{item.name}</p>
+                            </Option>
+                        ))
+                    }
 
-            </Select>
+                </Select>
 
-            <Button
-                className='button'
-                type='ghost'
-                onClick={() => setBold(!bold)}
-                icon={<AiOutlineBold size={18} style={{ color: '#463f3a' }} />} style={{
-                    borderRadius: '50%',
-                    backgroundColor: `#e0afa0${bold ? '' : '70'}`,
-                    // height: '50px', width: '50px',
-                    border: '0px solid transparent',
-                    transition: 'all 0.45s ease-in-out',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                    // border: `1px solid${props.color}20`
-                }} />
-            <Button
-                className='button'
-                type='ghost'
-                onClick={() => setItalic(!italic)}
-                icon={<AiOutlineItalic size={18} style={{ color: '#463f3a' }} />} style={{
-                    borderRadius: '50%', backgroundColor: `#e0afa0${italic ? '' : '70'}`,
-                    // height: '50px', width: '50px',
-                    border: '0px solid transparent',
-                    transition: 'all 0.45s ease-in-out',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }} />
-            <Button
-                className='button'
-                type='ghost'
-                onClick={handleJusitfy}
-                icon={justIcon} style={{
-                    borderRadius: '50%', backgroundColor: `#e0afa070`,
-                    // height: '50px', width: '50px',
-                    border: '0px solid transparent',
-                    transition: 'all 0.45s ease-in-out',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }} />
+                <Button
+                    className='button'
+                    type='ghost'
+                    onClick={() => setBold(!bold)}
+                    icon={<AiOutlineBold size={18} style={{ color: '#463f3a' }} />} style={{
+                        borderRadius: '0',
+                        backgroundColor: `#e0afa0${bold ? '' : '70'}`,
+                        // height: '35px', width: '35px',
+                        border: '0px solid transparent',
+                        transition: 'all 0.45s ease-in-out',
+                        margin:'0 2px 0 2px',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                        // border: `1px solid${props.color}20`
+                    }} />
+                <Button
+                    className='button'
+                    type='ghost'
+                    onClick={() => setItalic(!italic)}
+                    icon={<AiOutlineItalic size={18} style={{ color: '#463f3a' }} />} style={{
+                        borderRadius: '0', backgroundColor: `#e0afa0${italic ? '' : '70'}`,
+                        // height: '35px', width: '35px',
+                        border: '0px solid transparent',
+                        transition: 'all 0.45s ease-in-out',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }} />
+                <Button
+                    className='button'
+                    type='ghost'
+                    onClick={handleJusitfy}
+                    icon={justIcon} style={{
+                        borderRadius: '0 3vh 3vh 0', backgroundColor: `#e0afa070`,
+                        // height: '35px', width: '35px',
+                        border: '0px solid transparent',
+                        margin:'0 0 0 2px',
+                        transition: 'all 0.45s ease-in-out',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }} />
+            </Row>
+
+
 
             <div style={{
-                backgroundColor: '#463f3a80', 
+                backgroundColor: '#463f3a80',
                 height: '20px', width: "1px",
+                margin: '0 1vh 0 1vh'
             }} />
 
             <img src={emotion} className='button'
                 onClick={() => setModal(true)}
                 style={{
-                    height: '30px', marginRight: '0vh', transition: 'all 0.45s ease-in-out',
+                    height: '30px', width: '30px',
+                    marginRight: '0vh', transition: 'all 0.45s ease-in-out',
                     cursor: 'pointer'
                 }} />
 
