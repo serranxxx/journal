@@ -136,7 +136,7 @@ export const FooterMobile_ = (props) => {
             }}>
                 <Button
                     onClick={() => saveNote()}
-                    className='button'
+                    // className='button'
                     onMouseEnter={() => setSaveButton(true)} onMouseLeave={() => setSaveButton(false)}
                     style={{
                         borderRadius: '3vh 0 0 3vh',
@@ -151,7 +151,7 @@ export const FooterMobile_ = (props) => {
                         : <AiFillSave size={18} style={{ color: '#463f3a' }} />} type='ghost' />
 
                 <Button
-                    className='button'
+                    // className='button'
                     onClick={() => setPrompt(!prompt)}
                     onMouseEnter={() => setPromptButton(true)} onMouseLeave={() => setPromptButton(false)}
                     style={{
@@ -210,7 +210,7 @@ export const FooterMobile_ = (props) => {
                 </Select>
 
                 <Button
-                    className='button'
+                    // className='button'
                     type='ghost'
                     onClick={() => setBold(!bold)}
                     icon={<AiOutlineBold size={18} style={{ color: '#463f3a' }} />} style={{
@@ -224,7 +224,7 @@ export const FooterMobile_ = (props) => {
                         // border: `1px solid${props.color}20`
                     }} />
                 <Button
-                    className='button'
+                    // className='button'
                     type='ghost'
                     onClick={() => setItalic(!italic)}
                     icon={<AiOutlineItalic size={18} style={{ color: '#463f3a' }} />} style={{
@@ -235,7 +235,7 @@ export const FooterMobile_ = (props) => {
                         display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }} />
                 <Button
-                    className='button'
+                    // className='button'
                     type='ghost'
                     onClick={handleJusitfy}
                     icon={justIcon} style={{
@@ -256,7 +256,8 @@ export const FooterMobile_ = (props) => {
                 margin: '0 1vh 0 1vh'
             }} />
 
-            <img src={emotion} className='button'
+            <img src={emotion} 
+            // className='button'
                 onClick={() => setModal(true)}
                 style={{
                     height: '30px', width: '30px',
