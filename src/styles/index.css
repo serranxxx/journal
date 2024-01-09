@@ -15,6 +15,13 @@ code {
 
 .select .ant-select-selector {
   background-color: #e0afa070 !important;
+  border-radius: 3vh !important;
+  border:0px solid #e9cbc2 !important;
+
+}
+
+.select-mobile .ant-select-selector {
+  background-color: #e0afa070 !important;
   border-radius: 3vh 0 0 3vh;
   border:0px solid #e9cbc2 !important;
 

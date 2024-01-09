@@ -184,7 +184,7 @@ export const FooterMobile_ = (props) => {
             }}>
                 <Select
                     dropdownStyle={{ backgroundColor: '#f4f3ed' }}
-                    className='select'
+                    className='select-mobile'
                     value={font}
                     placeholder={font}
                     // value={<BiFontFamily size={25} style={{ marginTop: '1.3vh', color: '#463f3a' }} />}
