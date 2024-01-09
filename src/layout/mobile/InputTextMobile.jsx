@@ -73,40 +73,37 @@ export const InputTextMobile = (props) => {
                         value={title}
                         maxLength={35}
                         style={{
-                            width: '80%', marginBottom: '1vh', fontSize: '1.4em', textAlign: 'left',
+                            width: '80%', marginBottom: '1vh', fontSize: '1.1em', textAlign: 'left',
                             fontWeight: 600, backgroundColor: 'transparent',
                             border: `1px solid transparent`,
                             fontStyle: 'italic', fontFamily: props.font,
                             color: '#463f3a',
                         }} />
-                    {/* <p style={{
-                        marginLeft: '2vh', width: '35%', fontWeight: 650,
-                        color: '#463f3a',
-                        fontSize: '1.5em', fontStyle: 'italic', fontFamily: props.font
-                    }}>{`/ ${date}`}</p> */}
+
                 </Row>
                 <hr style={{
                     width: '90%', borderRadius:'2vh',
                     border: `1px solid #E0AFA060`
                 }} />
                 <Row style={{
-                    width: '95%', alignItems: 'center',
+                    width: '90%', alignItems: 'center',
                     justifyContent: 'flex-start', flexDirection: 'row',
-                    display: `${prompt ? 'flex' : 'none'}`
+                    display: `${prompt ? 'flex' : 'none'}`,
+            
                 }}>
                     <p style={{
-                        marginRight: '2vh', width: 'auto', fontWeight: 600, textAlign: props.justify,
-                        fontSize: '1.1em', fontStyle: `${props.italic ? '' : 'italic'}`, fontFamily: props.font,
-                         width: '93%',
+                        fontWeight: 600, textAlign: props.justify,
+                        fontSize: '1em', fontStyle: `${props.italic ? '' : 'italic'}`, fontFamily: props.font,
+                        
                         color: '#463f3a',
                     }}>{`${RandomQuestion(randomNum)}`}</p>
                     <Button
                         type='ghost'
                         onClick={() => setRandomNum(Math.floor(Math.random() * 100) + 1)}
-                        icon={<TbSwitch2 size={18} style={{}} />}
+                        icon={<TbSwitch2 size={13} style={{}} />}
                         style={{
-                            backgroundColor: `transparent`,
-                            border: `0px solid #463f3a`, marginTop: '1vh'
+                            display:'flex', alignItems:'center', justifyContent:'center',
+                            border: `0px solid #463f3a`,
                         }} />
 
                 </Row>

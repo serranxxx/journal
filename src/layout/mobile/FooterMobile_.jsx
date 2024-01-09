@@ -124,6 +124,7 @@ export const FooterMobile_ = (props) => {
             position: 'fixed', zIndex: 1, width: '100%', bottom: 0,
             display: 'flex', alignItems: 'center', justifyContent: 'space-around',
             height: '10vh',
+            borderTop:'1px solid #463f3a20',
             // boxShadow: '-10px 0px 10px #00000030',
             backgroundColor: '#f4f3ee'
         }}>
@@ -138,7 +139,6 @@ export const FooterMobile_ = (props) => {
                     // height: '50px', width: '50px',
                     border: '0px solid transparent',
                     transition: 'all 0.45s ease-in-out',
-                    margin: '0 1vh 0 0',
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                 }}
                 icon={!saveButton
@@ -155,7 +155,6 @@ export const FooterMobile_ = (props) => {
                     // height: '50px', width: '50px',
                     border: '0px solid transparent',
                     transition: 'all 0.45s ease-in-out',
-                    // margin: '0 1vh 0 1vh',
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                 }}
                 icon={!prompt
@@ -166,7 +165,7 @@ export const FooterMobile_ = (props) => {
 
 
             <div style={{
-                backgroundColor: '#463f3a80', margin: '0 1vh 0 1vh',
+                backgroundColor: '#463f3a80', 
                 height: '20px', width: "1px",
             }} />
 
@@ -207,7 +206,6 @@ export const FooterMobile_ = (props) => {
                     // height: '50px', width: '50px',
                     border: '0px solid transparent',
                     transition: 'all 0.45s ease-in-out',
-                    margin: '0 1vh 0 1vh',
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                     // border: `1px solid${props.color}20`
                 }} />
@@ -231,12 +229,11 @@ export const FooterMobile_ = (props) => {
                     // height: '50px', width: '50px',
                     border: '0px solid transparent',
                     transition: 'all 0.45s ease-in-out',
-                    margin: '0 0 0 1vh',
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                 }} />
 
             <div style={{
-                backgroundColor: '#463f3a80', margin: '0 1vh 0 1vh',
+                backgroundColor: '#463f3a80', 
                 height: '20px', width: "1px",
             }} />
 

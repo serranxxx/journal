@@ -14,6 +14,7 @@ export const HeaderMobile = ({location}) => {
             backgroundColor: `#E0AFA0`,
             // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             // boxShadow: '10px 0px 10px #00000040',
+            borderBottom:'1px solid #463f3a20',
             height: '8vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
@@ -27,12 +28,12 @@ export const HeaderMobile = ({location}) => {
                     <Button 
                     type='ghost'
                     icon={<TiArrowBack 
-                        size={35}
+                        size={30}
                         style={{
                         color:'#f4f3ed'
                     }}/>}
                     style={{
-                        position:'absolute', right:'25px', top:'10px'
+                        position:'absolute', right:'25px', top:'8px'
                     }}
                     />
                 </Link>
